@@ -1,0 +1,342 @@
+ :root {
+    --bg-main: #f7f8fb;
+    --bg-soft: #eef1f5;
+    --bg-panel: rgba(255, 255, 255, 0.92);
+    --bg-panel-strong: #ffffff;
+    --text-main: #101418;
+    --text-muted: #55606f;
+    --text-soft: #6d7785;
+    --border: #d6dce5;
+    --border-strong: #b7c2d0;
+    --navy: #163250;
+    --navy-soft: #2c4e73;
+    --shadow: 0 18px 50px rgba(22, 50, 80, 0.10);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(44, 78, 115, 0.10), transparent 32%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg-main) 52%, #edf1f6 100%);
+    color: var(--text-main);
+}
+
+.main-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    color: var(--text-main);
+    padding: 1.5rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--navy);
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s, color 0.2s;
+}
+nav a.active, nav a:hover {
+    color: var(--navy);
+    border-bottom: 2px solid var(--navy-soft);
+}
+
+.hero {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 240, 247, 0.94)),
+        linear-gradient(120deg, rgba(22, 50, 80, 0.08), rgba(44, 78, 115, 0.04));
+    padding: 4rem 2rem 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+.hero::after,
+.faq-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto -10% -35% auto;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(44, 78, 115, 0.14) 0%, rgba(44, 78, 115, 0) 70%);
+    pointer-events: none;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.cta-btn {
+    background: var(--navy);
+    color: #fff;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+    background: var(--navy-soft);
+    color: #fff;
+}
+
+.products {
+    padding: 3rem 2rem 4rem 2rem;
+    background: linear-gradient(180deg, rgba(243, 246, 250, 0.7), rgba(255, 255, 255, 0.92));
+    min-height: 70vh;
+}
+.products h2 {
+    color: var(--text-main);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+.product-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(245, 247, 250, 0.98));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    width: 320px;
+    padding: 1.5rem 1.2rem 2rem 1.2rem;
+    text-align: center;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+.product-card:hover {
+    box-shadow: 0 22px 54px rgba(22, 50, 80, 0.16);
+    border: 1.5px solid var(--border-strong);
+    transform: translateY(-4px);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    background: var(--bg-soft);
+}
+.product-card h3 {
+    color: var(--navy);
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+.product-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.faq-page {
+    padding: 3rem 2rem 4.5rem 2rem;
+    min-height: 70vh;
+}
+
+.faq-hero {
+    max-width: 900px;
+    margin: 0 auto 2.5rem auto;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(236, 241, 247, 0.96));
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.eyebrow {
+    margin: 0 0 0.8rem 0;
+    color: var(--navy-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.28rem;
+    font-size: 0.8rem;
+}
+
+.faq-hero h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    max-width: 12ch;
+}
+
+.faq-intro {
+    max-width: 650px;
+    margin: 1.2rem 0 0 0;
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.faq-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 1.8rem;
+    align-items: start;
+}
+
+.faq-highlight-card,
+.faq-item {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.faq-highlight-card {
+    padding: 1.8rem;
+    position: sticky;
+    top: 1.5rem;
+}
+
+.highlight-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(22, 50, 80, 0.08);
+    color: var(--navy);
+    font-size: 0.82rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.faq-highlight-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--navy);
+}
+
+.faq-highlight-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+}
+
+.faq-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-item {
+    padding: 0 1.4rem;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.35rem 2.5rem 1.35rem 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--text-main);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--navy-soft);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 0 1.35rem 0;
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1.2rem 0 1.2rem 0;
+    font-size: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-content {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-highlight-card {
+        position: static;
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-header,
+    .hero,
+    .products,
+    .faq-page {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .faq-hero {
+        padding: 1.5rem;
+    }
+}
