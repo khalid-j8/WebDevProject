@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Luxury Vehicle Store</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="main-header">
-        <h1>Luxury Vehicle Store</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">View Products</a>
-            <a href="faq.html" class="active">FAQ</a>
-        </nav>
-    </header>
-
+<?php
+$pageTitle = 'FAQ | Luxury Vehicle Store';
+$currentPage = 'faq';
+include __DIR__ . '/includes/header.php';
+?>
     <main class="faq-page">
         <section class="faq-hero">
             <p class="eyebrow">Client Support</p>
@@ -34,7 +21,7 @@
                     Our team helps you compare models, arrange financing, and organize nationwide
                     delivery so the buying process feels as refined as the vehicles themselves.
                 </p>
-                <a href="products.html" class="cta-btn">Explore Collection</a>
+                <a href="products.php" class="cta-btn">Explore Collection</a>
             </div>
 
             <div class="faq-list">
@@ -89,9 +76,4 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Luxury Vehicle Store. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<?php include __DIR__ . '/includes/footer.php'; ?>
