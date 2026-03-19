@@ -809,6 +809,114 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+
+
+
+
+
+
+
+
+
+/* ADDED MARCH 18th: this is for our new slider for images in the about page           
+- Taha */
+
+.slider-container {
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    animation: slide 12s infinite;
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Animation */
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(0); }
+
+        38% { transform: translateX(-100%); }
+        66% { transform: translateX(-100%); }
+
+        71% { transform: translateX(-200%); }
+        100% { transform: translateX(-200%); }
+    }
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.slider-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    animation: dotAnim 12s infinite;
+}
+
+/* Animate dots */
+.slider-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+.slider-dots span:nth-child(2) {
+    animation-delay: 4s;
+}
+.slider-dots span:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes dotAnim {
+    0%, 33% {
+        background: black;
+        transform: scale(1.2);
+    }
+    34%, 100% {
+        background: rgba(0,0,0,0.3);
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 900px) {
     .product-list {
         flex-direction: column;
@@ -888,4 +996,16 @@ footer {
     .page-hero {
         padding: 1.5rem;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
