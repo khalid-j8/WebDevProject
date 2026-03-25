@@ -21,6 +21,13 @@ $themeClass = $siteSettings['site_theme'] ?? 'theme-classic';
     <header class="main-header">
         <h1>Luxury Vehicle Store</h1>
         <nav>
+            <select id="ThemeSelect">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="slate">Slate</option>
+                <option value="luxe">Luxe</option>
+                <option value="f1">F1</option>
+            </select>
             <a href="index.php"<?= $currentPage === 'home' ? ' class="active"' : '' ?>>Home</a>
             <a href="about.php"<?= $currentPage === 'about' ? ' class="active"' : '' ?>>About</a>
             <a href="products.php"<?= $currentPage === 'products' ? ' class="active"' : '' ?>>View Products</a>
@@ -41,3 +48,15 @@ $themeClass = $siteSettings['site_theme'] ?? 'theme-classic';
             <?php endif; ?>
         </nav>
     </header>
+    <script>
+        const themeSelect = document.getElementById("ThemeSelect");
+        const savedTheme = localStorage.getItem("site_theme") || "light";
+        document.body.classList.add(`theme-${savedTheme}`);
+        themeSelect.value = savedTheme;
+        themeSelect.addEventListener("change", () => {
+        document.body.classList.remove("theme-light", "theme-dark", "theme-slate", "theme-luxe", "theme-f1");
+        const newTheme = themeSelect.value;
+        document.body.classList.add(`theme-${newTheme}`);
+        localStorage.setItem("site_theme", newTheme);
+});
+</script>
