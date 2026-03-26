@@ -2,7 +2,8 @@
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/settings.php';
 
-$pageTitle = $pageTitle ?? 'Luxury Vehicle Store';
+$siteName = 'Apex Motors';
+$pageTitle = $pageTitle ?? $siteName;
 $currentPage = $currentPage ?? '';
 $currentUser = getCurrentUser();
 $siteSettings = getSiteSettings();
@@ -13,13 +14,14 @@ $themeClass = $siteSettings['site_theme'] ?? 'theme-classic';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore premium luxury vehicles, expert buying guidance, and client support from Luxury Vehicle Store.">
-    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
+    <meta name="description" content="Explore premium luxury vehicles, expert buying guidance, and client support from <?= $siteName ?>.">    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="<?= htmlspecialchars($themeClass, ENT_QUOTES, 'UTF-8') ?>">
     <header class="main-header">
-        <h1>Luxury Vehicle Store</h1>
+        <h1><?= $siteName ?></h1>
         <nav>
             <a href="index.php"<?= $currentPage === 'home' ? ' class="active"' : '' ?>>Home</a>
             <a href="about.php"<?= $currentPage === 'about' ? ' class="active"' : '' ?>>About</a>
