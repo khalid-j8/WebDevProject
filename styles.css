@@ -22,35 +22,44 @@
             color: var(--text-main);
         }
 
-        body.theme-slate {
-            --bg-main: #edf2f7;
-            --bg-soft: #dde5ef;
-            --text-main: #13202f;
-            --text-muted: #516274;
-            --text-soft: #66788b;
-            --border: #c8d4e1;
-            --border-strong: #8da4bd;
-            --navy: #21476f;
-            --navy-soft: #3d658f;
-            --shadow: 0 18px 50px rgba(24, 46, 74, 0.12);
+        body.theme-luxe {
+            --bg-main: #fbf8f1;
+            --bg-soft: #f3ede0;
+            --text-main: #191716;
+            --text-muted: #6d6257;
+            --text-soft: #85776a;
+            --border: #e1d5c0;
+            --border-strong: #c5ad82;
+            --navy: #243b5e;
+            --navy-soft: #3d567c;
+            --shadow: 0 18px 50px rgba(65, 46, 22, 0.10);
         }
-    body.theme-dark {
-        --bg-main: #07080a;
-        --bg-soft: #2d3748;
-        --bg-panel: #2d3748;
-        --text-main: #e2e8f0;
-        --text-muted: #a0aec0;
-        --text-soft: #c4c7cd;
-        --text-on-primary: #ccd0d7;
-        --border: #4a5568;
-        --border-strong: #2d3748;
-        --navy: #2c5282;
-        --navy-soft: #2a69ac;
-        --shadow: 0 18px 50px rgba(44, 78, 115, 0.16);
-    }
+        body.theme-f1 {
+        --bg-main: #0d0d0d;
+        --bg-soft: #1a1a1a;
+        --text-main: #ff0000;
+        --text-muted: #cccccc;
+        --border: #ff0000;
+        --border-strong: #ff4d4d;
+        --navy: #ff0000;}
+        
+        body.theme-dark {
+            --bg-main: #07080a;
+            --bg-soft: #2d3748;
+            --bg-panel: #2d3748;
+            --text-main: #e2e8f0;
+            --text-muted: #a0aec0;
+            --text-soft: #c4c7cd;
+            --text-on-primary: #ccd0d7;
+            --border: #4a5568;
+            --border-strong: #2d3748;
+            --navy: #2c5282;
+            --navy-soft: #2a69ac;
+            --shadow: 0 18px 50px rgba(44, 78, 115, 0.16);
+        }
 
 .main-header {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--bg-panel);
     backdrop-filter: blur(10px);
     color: var(--text-main);
     padding: 1.5rem 2rem 1rem 2rem;
@@ -85,7 +94,7 @@ nav a.active, nav a:hover {
 
 .hero {
     background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 240, 247, 0.94)),
+        linear-gradient(135deg, var(--bg-panel),var(--bg-soft)),
         linear-gradient(120deg, rgba(22, 50, 80, 0.08), rgba(44, 78, 115, 0.04));
     padding: 4rem 2rem 5rem 2rem;
     text-align: center;
@@ -174,7 +183,7 @@ nav a.active, nav a:hover {
 .info-card,
 .content-card,
 .step-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     border: 1px solid var(--border);
     border-radius: 24px;
     box-shadow: var(--shadow);
@@ -215,7 +224,7 @@ nav a.active, nav a:hover {
 
 .products {
     padding: 3rem 2rem 4rem 2rem;
-    background: linear-gradient(180deg, rgba(243, 246, 250, 0.7), rgba(255, 255, 255, 0.92));
+    background: linear-gradient(180deg, var(--bg-soft), var(--bg-panel));
     min-height: 70vh;
 }
 .products h2 {
@@ -244,9 +253,10 @@ nav a.active, nav a:hover {
     flex-wrap: wrap;
     gap: 2.5rem;
     justify-content: center;
+    color: var(--bg-panel);
 }
 .product-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(245, 247, 250, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     border: 1px solid var(--border);
     border-radius: 18px;
     box-shadow: var(--shadow);
@@ -331,7 +341,7 @@ nav a.active, nav a:hover {
     padding: 2.5rem;
     border: 1px solid var(--border);
     border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(236, 241, 247, 0.96));
+    background: linear-gradient(135deg, var(--bg-panel), var(--bg-main));
     box-shadow: var(--shadow);
 }
 
@@ -373,7 +383,7 @@ nav a.active, nav a:hover {
 .detail-panel {
     padding: 2rem;
     border-radius: 28px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 250, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
 }
@@ -433,7 +443,7 @@ nav a.active, nav a:hover {
     padding: 2.5rem;
     border: 1px solid var(--border);
     border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(236, 241, 247, 0.96));
+    background: linear-gradient(135deg, var(--bg-panel), var(--bg-main));
     box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
@@ -473,7 +483,7 @@ nav a.active, nav a:hover {
 
 .faq-highlight-card,
 .faq-item {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     border: 1px solid var(--border);
     border-radius: 22px;
     box-shadow: var(--shadow);
@@ -526,7 +536,7 @@ nav a.active, nav a:hover {
 
 .auth-panel,
 .auth-side-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     border: 1px solid var(--border);
     border-radius: 24px;
     box-shadow: var(--shadow);
@@ -632,7 +642,7 @@ nav a.active, nav a:hover {
     padding: 1.4rem;
     border-radius: 24px;
     border: 1px solid var(--border);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
     box-shadow: var(--shadow);
     overflow-x: auto;
 }
@@ -802,7 +812,7 @@ nav a.active, nav a:hover {
 }
 
 footer {
-    background: rgba(255, 255, 255, 0.92);
+    background: var(--bg-panel);
     color: var(--text-muted);
     text-align: center;
     padding: 1.2rem 0 1.2rem 0;
@@ -890,61 +900,11 @@ footer {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 900px) {
     .product-list {
         flex-direction: column;
         align-items: center;
     }
-
-        body.theme-luxe {
-            --bg-main: #fbf8f1;
-            --bg-soft: #f3ede0;
-            --text-main: #191716;
-            --text-muted: #6d6257;
-            --text-soft: #85776a;
-            --border: #e1d5c0;
-            --border-strong: #c5ad82;
-            --navy: #243b5e;
-            --navy-soft: #3d567c;
-            --shadow: 0 18px 50px rgba(65, 46, 22, 0.10);
-        }
-        body.theme-f1 {
-        --bg-main: #0d0d0d;
-        --bg-soft: #1a1a1a;
-        --text-main: #ff0000;
-        --text-muted: #cccccc;
-        --border: #ff0000;
-        --border-strong: #ff4d4d;
-        --navy: #ff0000;}
-
         .main-header {
             background: var(--bg-panel);
             backdrop-filter: blur(10px);
@@ -1072,7 +1032,7 @@ footer {
         .info-card,
         .content-card,
         .step-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), var(--bg-panel-soft));
+            background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-soft));
             border: 1px solid var(--border);
             border-radius: 24px;
             box-shadow: var(--shadow);
@@ -1117,9 +1077,10 @@ footer {
 
         .products {
             padding: 3rem 2rem 4rem 2rem;
-            background: linear-gradient(180deg,var(--bg-panel), var(--bg-soft));
+            background: linear-gradient(180deg,var(--bg-panel), var(--bg-main));
             min-height: 70vh;
         }
+
         .products h2 {
             color: var(--text-main);
             font-size: 2rem;
@@ -1148,7 +1109,7 @@ footer {
             justify-content: center;
         }
         .product-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98,),white    );
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98),white    );
             border: 1px solid var(--border);
             border-radius: 18px;
             box-shadow: var(--shadow);
@@ -1275,7 +1236,7 @@ footer {
         .detail-panel {
             padding: 2rem;
             border-radius: 28px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 250, 0.98));
+            background: linear-gradient(180deg, var(--bg-panel), rgba(241, 245, 250, 0.98));
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
         }
@@ -1375,7 +1336,7 @@ footer {
 
         .faq-highlight-card,
         .faq-item {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+            background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
             border: 1px solid var(--border);
             border-radius: 22px;
             box-shadow: var(--shadow);
@@ -1431,7 +1392,7 @@ footer {
 
         .auth-panel,
         .auth-side-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+            background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
             border: 1px solid var(--border);
             border-radius: 24px;
             box-shadow: var(--shadow);
@@ -1544,7 +1505,7 @@ footer {
             padding: 1.4rem;
             border-radius: 24px;
             border: 1px solid var(--border);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+            background: linear-gradient(180deg, var(--bg-panel), var(--bg-main));
             box-shadow: var(--shadow);
             overflow-x: auto;
         }

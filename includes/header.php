@@ -24,7 +24,6 @@ $themeClass = $siteSettings['site_theme'] ?? 'theme-classic';
             <select id="ThemeSelect">
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
-                <option value="slate">Slate</option>
                 <option value="luxe">Luxe</option>
                 <option value="f1">F1</option>
             </select>
@@ -54,7 +53,7 @@ $themeClass = $siteSettings['site_theme'] ?? 'theme-classic';
         document.body.classList.add(`theme-${savedTheme}`);
         themeSelect.value = savedTheme;
         themeSelect.addEventListener("change", () => {
-        document.body.classList.remove("theme-light", "theme-dark", "theme-slate", "theme-luxe", "theme-f1");
+        document.body.classList.remove("theme-light", "theme-dark", "theme-luxe", "theme-f1");
         const newTheme = themeSelect.value;
         document.body.classList.add(`theme-${newTheme}`);
         localStorage.setItem("site_theme", newTheme);
