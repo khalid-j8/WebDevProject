@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php83", "apacheHttpd"]
+nixPkgs = ["php83", "php83Extensions.pdo", "php83Extensions.pdo_mysql"]
 
 [start]
-cmd = "httpd -f /app/apache.conf -D FOREGROUND"
+cmd = "php -S 0.0.0.0:80 -t /app"
