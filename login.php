@@ -40,14 +40,14 @@ include __DIR__ . '/includes/header.php';
                         Password
                         <input type="password" name="password" required>
                     </label>
-                    <button type="submit" class="cta-btn">Sign In</button>
+                    <button type="submit" class="secondary-btn-2">Sign In</button>
                 </form>
             </div>
             <aside class="auth-side-card">
                 <span class="section-tag">New Here?</span>
                 <h3>Create your account in minutes.</h3>
                 <p>Register for the private area to manage your profile and prepare for future saved-vehicle and booking features.</p>
-                <a href="register.php" class="secondary-btn">Create an Account</a>
+                <a href="register.php" class="cta-btn-2">Create an Account</a>
             </aside>
         </section>
     </main>

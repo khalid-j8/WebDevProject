@@ -1583,7 +1583,8 @@ body {
 
     padding: 14px 28px;
     border-radius: 30px;
-    font-weight: 600;
+    font: inherit;
+    font-weight: 900;
     text-decoration: none;
 
     backdrop-filter: blur(6px);

@@ -56,14 +56,14 @@ include __DIR__ . '/includes/header.php';
                         Password
                         <input type="password" name="password" minlength="8" required>
                     </label>
-                    <button type="submit" class="cta-btn">Create Account</button>
+                    <button type="submit" class="secondary-btn-2">Create Account</button>
                 </form>
             </div>
             <aside class="auth-side-card">
                 <span class="section-tag">Private Area</span>
                 <h3>What your account unlocks</h3>
                 <p>Access your dashboard, manage profile details, and prepare for saved vehicles and booking tools as the project grows.</p>
-                <a href="login.php" class="secondary-btn">Already have an account?</a>
+                <a href="login.php" class="secondary-btn-2">Already have an account?</a>
             </aside>
         </section>
     </main>

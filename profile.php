@@ -38,7 +38,7 @@ include __DIR__ . '/includes/header.php';
                         Email Address
                         <input type="email" value="<?= htmlspecialchars($user['email'], ENT_QUOTES, 'UTF-8') ?>" disabled>
                     </label>
-                    <button type="submit" class="cta-btn">Save Changes</button>
+                    <button type="submit" class="secondary-btn-2">Save Changes</button>
                 </form>
             </div>
             <aside class="auth-side-card">
@@ -46,7 +46,7 @@ include __DIR__ . '/includes/header.php';
                 <h3><?= htmlspecialchars(ucfirst($user['account_status']), ENT_QUOTES, 'UTF-8') ?> member</h3>
                 <p>Role: <?= htmlspecialchars(ucfirst($user['role']), ENT_QUOTES, 'UTF-8') ?></p>
                 <p>Need to leave the private area? You can safely sign out at any time.</p>
-                <a href="logout.php" class="secondary-btn">Sign Out</a>
+                <a href="logout.php" class="secondary-btn-2">Sign Out</a>
             </aside>
         </section>
     </main>
