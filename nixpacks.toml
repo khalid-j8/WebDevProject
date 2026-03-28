@@ -2,4 +2,4 @@
 nixPkgs = ["php83", "apacheHttpd"]
 
 [start]
-cmd = "apache2 -D FOREGROUND"
+cmd = "httpd -D FOREGROUND"
