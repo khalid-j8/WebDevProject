@@ -47,8 +47,8 @@ include __DIR__ . '/includes/header.php';
                     </div>
 
                     <div class="hero-actions detail-actions">
-                        <a href="contact.php" class="cta-btn">Book an Inquiry</a>
-                        <a href="products.php" class="secondary-btn">Back to Inventory</a>
+                        <a href="contact.php" class="cta-btn-2">Book an Inquiry</a>
+                        <a href="products.php" class="secondary-btn-2">Back to Inventory</a>
                     </div>
                 </div>
             </section>

@@ -7,13 +7,14 @@ $products = getAllProducts();
 include __DIR__ . '/includes/header.php';
 ?>
     <section class="products">
-        <div class="section-heading">
-            <div>
-                <p class="eyebrow">Live Inventory</p>
-                <h2>Our Collection</h2>
+        <div class="products-heading">
+            <div class="heading-eyebrow-products">
+                <div class="eyebrow-line-products"></div>
+                <p class="eyebrow-products">Live Inventory</p>
             </div>
-            <p class="section-copy">Our products page is now connected to a PHP repository layer and ready for MySQL-backed inventory records.</p>
+            <h2>Our Collection</h2>
         </div>
+        
         <div class="product-list">
             <?php foreach ($products as $product): ?>
                 <article class="product-card">
