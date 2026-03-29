@@ -8,11 +8,11 @@ function getDatabaseConnection(): ?PDO
         return $pdo;
     }
 
-    $host = getenv('DB_HOST') ?: '127.0.0.1';
-    $port = getenv('DB_PORT') ?: '3306';
-    $dbName = getenv('DB_NAME') ?: 'webdevproject';
-    $username = getenv('DB_USER') ?: 'root';
-    $password = getenv('DB_PASS') ?: '';
+    $host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
+    $port = getenv('MYSQLPORT') ?: '3306';
+    $dbName = getenv('MYSQLDATABASE') ?: 'railway';
+    $username = getenv('MYSQLUSER') ?: 'root';
+    $password = getenv('MYSQLPASSWORD') ?: 'qqFEpmkEnkKXjTAXFbWVPqRYBocPEeUG';
 
     $dsn = "mysql:host={$host};port={$port};dbname={$dbName};charset=utf8mb4";
 
