@@ -1,7 +1,6 @@
-<!-- almost completed About us page, updated March18th   
- - Taha -->
 
 <?php
+//almost completed About us page, updated March18th   
 $pageTitle = 'About Us | Luxury Vehicle Store';
 $currentPage = 'about';
 include __DIR__ . '/includes/header.php';
