@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/product_repository.php';
 $products = getAllProducts();
 ?>
 
-<!-- VIDEO HERO -->
+<!-- VIDEO HEROo -->
 <section class="video-hero">
     <video autoplay muted loop playsinline class="hero-video">
         <source src="assets/videos/car.mp4" type="video/mp4">
@@ -54,7 +54,6 @@ $products = getAllProducts();
  <section class="feature-flow">
     <span class="line-dot"></span>
 
-    <!-- BLOCK 1 -->
     <div class="feature-row reveal left">
         <div class="feature-image">
             <img src="assets/images/img1.jpg" alt="Premium Vehicles">
@@ -68,7 +67,6 @@ $products = getAllProducts();
         </div>
     </div>
 
-    <!-- BLOCK 2 -->
     <div class="feature-row reverse reveal right">
         <div class="feature-image">
             <img src="assets/images/img2.jpg" alt="Financing Options">
@@ -82,7 +80,6 @@ $products = getAllProducts();
         </div>
     </div>
 
-    <!-- BLOCK 3 -->
     <div class="feature-row reveal left">
         <div class="feature-image">
             <img src="assets/images/img3.jpg" alt="Delivery Service">
@@ -96,7 +93,7 @@ $products = getAllProducts();
         </div>
     </div>
 
-    <!-- BLOCK 4 -->
+
     <div class="feature-row reverse reveal right">
         <div class="feature-image">
             <img src="assets/images/img4.jpg" alt="Client Support">
@@ -171,10 +168,8 @@ window.addEventListener('scroll', () => {
     const progress = Math.min(Math.max(scrolled / total, 0), 1);
     const height = progress * section.offsetHeight;
 
-    // update the line
     section.style.setProperty('--line-height', height + 'px');
 
-    // move the dot to the tip of the line
     dot.style.top = height + 'px';
 });
 

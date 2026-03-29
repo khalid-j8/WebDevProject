@@ -1153,9 +1153,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* =========================
-   Featured Slider Section
-   ========================= */
 
 .featured-section {
     padding: 80px 60px;
@@ -1206,7 +1203,7 @@ body {
     height: 220px;
     object-fit: cover;
 
-    transform: scale(1.1);          /* start zoomed in */
+    transform: scale(1.1);       
     transition: transform 0.4s ease;
     filter: brightness(0.9);
 }
@@ -1298,7 +1295,7 @@ body {
 
 
 
-/* ── Layout ─────────────────────────────────────────── */
+/*  Layout */
 .feature-flow {
     display: flex;
     flex-direction: column;
@@ -1317,7 +1314,7 @@ body {
 .feature-row.reverse .feature-image { order: 2; }
 .feature-row.reverse .feature-text  { order: 1; }
 
-/* ── Image ───────────────────────────────────────────── */
+/* Image */
 .feature-image {
     height: 320px;
 }
@@ -1330,7 +1327,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* ── Text card ───────────────────────────────────────── */
+/*  Text card  */
 .feature-text {
     padding: 40px;
     box-sizing: border-box;
@@ -1349,7 +1346,6 @@ body {
     line-height: 1.6;
 }
 
-/* ── Scroll reveal ───────────────────────────────────── */
 .reveal {
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.8s ease;
@@ -1363,7 +1359,6 @@ body {
     transform: translate(0);
 }
 
-/* ── Center divider line ─────────────────────────────── */
 .feature-flow::before,
 .feature-flow::after {
     content: "";
@@ -1429,14 +1424,13 @@ body {
 }
 
 
-/* SECTION BACKGROUND */
+
 .cta-section {
     padding: 100px 60px;
     display: flex;
     justify-content: center;
 }
 
-/* CTA BOX */
 .cta-box {
     max-width: 900px;
     text-align: center;
@@ -1455,7 +1449,6 @@ body {
     box-shadow: 0 20px 60px rgba(0,0,0,0.2);
 }
 
-/* TEXT */
 .cta-box h2 {
     font-size: 36px;
     margin-bottom: 15px;
@@ -1552,7 +1545,7 @@ body {
 
 
 
-/* PRIMARY BUTTON (Book Inquiry) */
+/* PRIMARY BUTTON */
 .cta-btn-2 {
     background: rgba(31, 58, 95, 0.75); /* same blue */
     color: #ffffff;
